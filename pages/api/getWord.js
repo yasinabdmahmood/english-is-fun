@@ -19,7 +19,7 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: generatePrompt(level),
-      temperature: 0.6,
+      temperature: 1,
       max_tokens: 20,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
@@ -42,5 +42,5 @@ export default async function (req, res) {
 function generatePrompt(level) {
 return `Generate a Random English word let the word be suitable for student who is at
 level ${level} in English remember that there are six levels (A1,A2,B1,B2,C1,C2).
-let the response be only one word`;
+let the response be only one word with braket like {desk}, try to be as random in your choise as possible`;
 }
