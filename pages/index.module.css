@@ -121,6 +121,7 @@
     padding: 10px;
     border: 1px solid green;
     margin: 5px;
+    border-radius: 10px;
   }
 
  .selected-level {
