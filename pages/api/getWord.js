@@ -40,7 +40,8 @@ export default async function (req, res) {
 }
 
 function generatePrompt(level) {
-return `Generate a Random English word let the word be suitable for student who is at
-level ${level} in English remember that there are six levels (A1,A2,B1,B2,C1,C2).
-let the response be only one word with braket like {desk}, try to be as random in your choise as possible`;
+  return `As an English language expert, you've been asked to generate a random English word that is suitable for a student at level ${level} of English proficiency. There are six levels: A1, A2, B1, B2, C1, and C2.
+  
+  Please choose a word that is appropriate for the student's level and write it within curly braces, e.g. {desk}. Aim to be as random as possible in your choice, ensuring that the word is both challenging and educational for the student.`;
 }
+
