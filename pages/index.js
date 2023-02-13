@@ -6,13 +6,14 @@ import LoadingSpinner from "./LoadingSpinner";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
-  const [animalInput, setAnimalInput] = useState("");
+  const [textInput, setTextInput] = useState("");
   const [result, setResult] = useState();
   const [word, setWord] = useState('');
   const options = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
   const [selectedOption, setSelectedOption] = useState(options[0]);
   async function generateWord(event) {
     setIsLoading(true);
+    setTextInput('');
     event.preventDefault();
     try {
       const response = await fetch("/api/getWord", {
@@ -39,6 +40,7 @@ export default function Home() {
   }
   ////////////////////////////////////
   async function onSubmit(event) {
+    setIsLoading(true);
     event.preventDefault();
     try {
       const response = await fetch("/api/getFeedback", {
@@ -46,7 +48,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ description: animalInput, word }),
+        body: JSON.stringify({ description: textInput, word }),
       });
 
       const data = await response.json();
@@ -55,17 +57,17 @@ export default function Home() {
       }
 
       setResult(data.result);
-      setAnimalInput("");
+      setTextInput(data.result.trim());
+      setIsLoading(false);
     } catch(error) {
       // Consider implementing your own error handling logic here
       console.error(error);
+      setIsLoading(false);
       alert(error.message);
     }
   }
 
-  const handleLevelChange = (e) => {
 
-  }
 
   return (
     <div>
@@ -73,10 +75,11 @@ export default function Home() {
         <title>English is fun</title>
         <link rel="icon" href="/english.png" />
       </Head>
-
+      <nav className={styles["nav"]}>
+        <img src="/logo.png" alt="logo" />
+        <ColoredText text={'English is fun'} className={styles['colored-text']} />
+      </nav>
       <main className={styles.main}>
-        <img src="/english.png" style={{width: '100px', marginBottom: '2rem'}} />
-        <ColoredText text={'English is fun'} />
         <div className={styles["levels-container"]}>
           <h4>Select Fluency level</h4>
           <ul className={styles["levels"]}>
@@ -96,17 +99,20 @@ export default function Home() {
           <textarea
             name="description"
             placeholder="Enter the description"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
+            value={textInput}
+            onChange={(e) => setTextInput(e.target.value)}
           />
+          <div className={styles["buttons"]}>
           <button type="submit" className={styles["myButton"]}>
           Get graded
           </button>
+          <button className={styles["myButton"]} onClick={generateWord}>Get word</button>
+          </div>
+          
         </form>
-        <button className={styles["myButton"]} onClick={generateWord}>Get word</button>
+        
         <h3>{word}</h3>
         {isLoading ? <LoadingSpinner /> : null}
-        <div className={styles.result}>{result}</div>
       </main>
     </div>
   );
