@@ -11,7 +11,6 @@ const ColoredText = ({ text }) => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    console.log(screenSize.width)
     const bodyStyles = window.getComputedStyle(document.body);
     setScreenSize({
       width: parseInt(bodyStyles.width),
