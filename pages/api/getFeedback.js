@@ -42,10 +42,8 @@ export default async function (req, res) {
   }
 }
 
-function generatePrompt(word,description) {
-return `A student in english test was asked to give desciption to word ${word} and 
-  he gave this description "${description}" grade his description from 1 to 10 based on 
-  how good of a description he gave, make sure to give a good description of the word as well 
-  when responding assume that you are directly giving the studen the give back by refering
-  to them as you instead of the student, do not go easy on the student`;
+function generatePrompt(word, description) {
+  return `As an English language expert, you've been asked to evaluate a student's description of the word "${word}". The student provided the following description: "${description}".
+  
+  Please grade their description on a scale of 1-10, taking into consideration the accuracy, detail, and creativity of their writing. Don't hold back, be honest and provide constructive feedback to help the student improve. Remember, you are addressing the student directly, so refer to them as "you".`;
 }
