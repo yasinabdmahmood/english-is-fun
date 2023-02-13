@@ -47,5 +47,5 @@ return `A student in english test was asked to give desciption to word ${word} a
   he gave this description "${description}" grade his description from 1 to 10 based on 
   how good of a description he gave, make sure to give a good description of the word as well 
   when responding assume that you are directly giving the studen the give back by refering
-  to them as you instead of the student`;
+  to them as you instead of the student, do not go easy on the student`;
 }
