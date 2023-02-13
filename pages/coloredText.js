@@ -19,7 +19,7 @@ const ColoredText = ({ text }) => {
   }, [router]);
   return (
     <div>
-      {text.map((letter, index) => (
+      {text.split('').map((letter, index) => (
         <span 
           key={index}
           style={{ color: colors[index % colors.length], 
