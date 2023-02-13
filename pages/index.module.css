@@ -65,7 +65,7 @@
 }
   .main form {
     display: flex;
-    width: 50%;
+    width: 70%;
     flex-direction: column;
   }
   form .buttons {
@@ -79,6 +79,8 @@
     padding: 12px 16px;
     width: 100%;
     min-height: 10rem;
+    font-size: 1.2rem;
+    font-family:monospace;
     border: 1px solid #10a37f;
     border-radius: 4px;
     margin-bottom: 24px;
