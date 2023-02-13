@@ -77,7 +77,7 @@ export default function Home() {
       </Head>
       <nav className={styles["nav"]}>
         <img src="/logo.png" alt="logo" />
-        <ColoredText text={'English is fun'} className={styles['colored-text']} />
+        <h1>English is fun</h1>
       </nav>
       <main className={styles.main}>
         <div className={styles["levels-container"]}>
