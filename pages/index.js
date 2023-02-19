@@ -4,6 +4,31 @@ import { useState } from "react";
 import styles from "./index.module.css";
 import LoadingSpinner from "./LoadingSpinner";
 
+const MultiColorText = ({ text }) => {
+  const styles = {
+    fontSize: '3rem',
+    fontWeight: '700',
+  }
+  // Define the colors
+  const colors = ['red', 'green', 'yellow', 'orange', 'purple'];
+
+  // Split the text into an array of characters
+  const characters = text.split('');
+
+  // Map over the characters and wrap each one in a span with a color
+  const coloredText = characters.map((char, index) => {
+    const colorIndex = index % colors.length;
+    const color = colors[colorIndex];
+    return <span  key={index} style={{ ...styles,color }}>{char}</span>;
+  });
+
+  return (
+    <div>
+      {coloredText}
+    </div>
+  );
+}
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [textInput, setTextInput] = useState("");
@@ -77,7 +102,7 @@ export default function Home() {
       </Head>
       <nav className={styles["nav"]}>
         <img src="/logo.png" alt="logo" />
-        <h1>English is fun</h1>
+        <MultiColorText text={'English is fun'} />
       </nav>
       <main className={styles.main}>
         <div className={styles["levels-container"]}>
