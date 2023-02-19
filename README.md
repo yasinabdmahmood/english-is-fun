@@ -42,21 +42,11 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [API Documentation](#api-documentation)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -95,16 +85,13 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## API Documentation <a name="api-documentation"></a>
-
-you can find the API Documentation [here](https://github.com/yasinabdmahmood/Doctor-appointment-app-backend/blob/dev/API%20Documentation.md)
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://english-is-fun.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,24 +152,13 @@ You should now be able to access the app at [http://localhost:3000](http://local
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-
-- [ ] **Add the ability to reschedule the appointmet**
-- [ ] **The ability to commuicate with the doctors via message**
-- [ ] **The ability to commuicate with the doctors via video call**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/yasinabdmahmood/Doctor-appointment-app-backend/issues).
+Feel free to check the [issues page](https://github.com/yasinabdmahmood/english-is-fun/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,32 +169,6 @@ Feel free to check the [issues page](https://github.com/yasinabdmahmood/Doctor-a
 
 
 If you like this project please give it a star
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
-
-I would like to thank [Murat Korkmaz](https://www.behance.net/muratk) for the [desin](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) that the front-end app of the project was inspired by 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
