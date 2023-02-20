@@ -106,7 +106,7 @@ export default function Home() {
       </nav>
       <main className={styles.main}>
         <div className={styles["levels-container"]}>
-          <h4>Select Fluency level</h4>
+          <h4>Select your Proficiency level</h4>
           <ul className={styles["levels"]}>
             {options.map(option => (
             <li key={option}   >
