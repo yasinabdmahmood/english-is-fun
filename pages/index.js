@@ -2,11 +2,12 @@ import Head from "next/head";
 
 import { useState } from "react";
 import styles from "./index.module.css";
+import titleStyle from "../styles/title.module.css"
 import LoadingSpinner from "./LoadingSpinner";
 
 const MultiColorText = ({ text }) => {
   const styles = {
-    fontSize: '3rem',
+  
     fontWeight: '700',
   }
   // Define the colors
@@ -19,7 +20,7 @@ const MultiColorText = ({ text }) => {
   const coloredText = characters.map((char, index) => {
     const colorIndex = index % colors.length;
     const color = colors[colorIndex];
-    return <span  key={index} style={{ ...styles,color }}>{char}</span>;
+    return <span className={titleStyle['title']}  key={index} style={{ ...styles,color }}>{char}</span>;
   });
 
   return (
@@ -35,6 +36,7 @@ export default function Home() {
   const [word, setWord] = useState('');
   const options = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
   const [selectedOption, setSelectedOption] = useState(options[0]);
+  
   async function generateWord(event) {
     setIsLoading(true);
     setTextInput('');
