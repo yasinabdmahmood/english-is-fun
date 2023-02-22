@@ -32,7 +32,6 @@ const MultiColorText = ({ text }) => {
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [textInput, setTextInput] = useState("");
-  const [result, setResult] = useState();
   const [word, setWord] = useState('');
   const options = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
   const [selectedOption, setSelectedOption] = useState(options[0]);
@@ -80,8 +79,6 @@ export default function Home() {
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-
-      setResult(data.result);
       setTextInput(data.result.trim());
       setIsLoading(false);
     } catch(error) {
