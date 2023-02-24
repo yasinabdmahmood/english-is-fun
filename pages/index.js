@@ -66,6 +66,14 @@ export default function Home() {
   }
   ////////////////////////////////////
   async function onSubmit(event) {
+    if(word === ''){
+      window.alert('Please get a word to describe')
+      return null;
+    }
+    if(textInput === ''){
+      window.alert('Please fill out the input field')
+      return null;
+    }
     setIsLoading(true);
     event.preventDefault();
     try {
